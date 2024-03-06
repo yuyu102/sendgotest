@@ -1,4 +1,5 @@
 <template>
+  <!-- 메뉴-->
   <nav class="navbar">
     <div class="nav_logo">
       <a href="">
@@ -13,17 +14,21 @@
       <i class="fa-solid fa-bars"></i>
     </a>
   </nav>
+<!-- 내용 -->
 
+  <!-- 메인 내용 -->
   <Maincomponent :imageUrls="imageUrls" />
 
+   <!-- 2, 3, 4 페이지 내용-->
   <Content :iconUrls="iconUrls" />
 
   <Page3 :page3Urls="page3Urls" />
 
   <Talk :talkUrls="talkUrls" />
-
+ <!-- 마무리 -->
   <Last />
 
+  <!-- footer -->
   <footer>
     <img class="footer_img" src="./assets/logo.svg" alt="logo.svg">
     <nav>
@@ -40,6 +45,7 @@
 
 <script>
 
+// 컴포넌트 import 
 import Maincomponent from './components/Maincomponent.vue';
 import Content from './components/Content.vue';
 import Page3 from './components/Page3.vue';
@@ -119,6 +125,7 @@ html, body {
   padding: 0;
   overflow-x: hidden; 
 }
+    /* 메뉴 */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -185,6 +192,7 @@ a {
   right: 32px;
   font-size: 24px;
   }
+    /* footer */
 footer {
   background-color: #222222;
   height: 316px;
